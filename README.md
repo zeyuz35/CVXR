@@ -1,5 +1,21 @@
 <!-- README.md is generated from the source: README.Rmd -->
 
+# Fork of CVXR to fix GUROBI
+
+A simple fork of CVXR to fix some issues when using the GUROBI solver. 
+Specifically, it renames `inst/extdata/gurobi_status_codes.csv` to `inst/extdata/GUROBI_status_codes.csv`.
+
+Alternatively, users can simply rename the file themselves:
+
+```r
+file.rename(
+  system.file("extdata", "gurobi_status_codes.csv", package = "CVXR"),
+  system.file("extdata", "GUROBI_status_codes.csv", package = "CVXR")
+)
+```
+
+See the GitHub [issue](https://github.com/cvxgrp/CVXR/issues/152) on the original CVXR repo for more details. 
+
 # CVXR <img src="man/figures/logo.png" width="100" align="right" />
 [![R-CMD-check](https://github.com/cvxgrp/CVXR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cvxgrp/CVXR/actions/workflows/R-CMD-check.yaml)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/CVXR)](https://cran.r-project.org/package=CVXR)
